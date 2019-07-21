@@ -1,0 +1,131 @@
+$temporary-border: black 1px solid;
+%sidebar-layout {
+    margin-top: 50px;
+    margin-left: 70px;
+}
+%sidebar-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background: linear-gradient(0deg,#e6e6e6, #fafafa) repeat-x;
+    font-family: "Microsoft JhengHei", serif;
+}
+
+.page {
+    background-color: #fff;
+    width: 100% * 8.5/10;
+    display: grid;
+    grid-template-columns: 28% 72%;
+}
+
+.sidebar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;     
+    width: 250px;
+}
+
+header {
+    @extend %sidebar-layout;
+    @extend %sidebar-flex;
+    img {
+        border-radius: 50%;
+        max-width: 150px;
+    }
+    .name {
+        padding-top: 10px;
+        p {
+            font-size: 25px;
+            font-weight: 600;
+            margin: 0 0;
+        }
+        h4 {
+            margin: 0 0;
+        }
+    }
+    .contact {
+        font-size: 20px;
+        padding-top: 20px;
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: pink;
+            }
+        }
+        p {
+            margin: 0 0;
+        }
+    }
+}
+
+.dividingLine {
+    height: 1px;
+    background-color: #e6e6e6;
+    top: .45em;
+    width: 200px;
+    @extend %sidebar-layout;
+}
+
+.skills {
+    @extend %sidebar-layout;
+    font-family: 'Quattrocento Sans', sans-serif;
+    ul {
+        list-style: none;
+        line-height: 2;
+    }
+}
+
+.mainContent {
+    // border: $temporary-border;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    a {
+        // border: $temporary-border;
+        height: 500px;
+        text-decoration: none;
+        color: black;
+        font-family: 'Quattrocento Sans', sans-serif;
+        &:hover {
+            border: #e6e6e6 1px solid;
+            border-radius: 8%;
+        }
+        div {
+            margin-top: 25px;
+            margin-left: 15px;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            -webkit-box-shadow: 3px 3px 5px #e6e6e6;
+	        -moz-box-shadow: 3px 3px 5px #e6e6e6;
+            box-shadow: 3px 3px 5px #e6e6e6;
+        }         
+    }
+    .education {
+        height: 500px;
+        section {
+            white-space: pre;
+            margin-top: 200px;
+            text-align: right;
+            margin-right: 70px;
+            span {
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+    }                           
+}
+   
+
+
