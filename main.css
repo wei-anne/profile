@@ -38,11 +38,11 @@ body {
 }
 
 .sidebar {
-  width: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 250px;
+  overflow: scroll;
 }
 
 header img {
